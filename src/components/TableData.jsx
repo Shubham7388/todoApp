@@ -63,7 +63,6 @@ function TaskTable({ formData, setFormdata }) {
             ? searchResult.map((task, index) => {
                 return (
                   <>
-                    {task.status === "pending" || task.status !== "pending" ? (
                       <tr
                         style={{
                           background:
@@ -98,9 +97,6 @@ function TaskTable({ formData, setFormdata }) {
                           />
                         </td>
                       </tr>
-                    ) : (
-                      ""
-                    )}
                   </>
                 );
               })
@@ -148,8 +144,7 @@ function TaskTable({ formData, setFormdata }) {
                       <td>{task.title}</td>
                       <td>{task.priority}</td>
                       <td>{task.status}</td>
-                    </tr>
-                 
+                    </tr>                 
                 </>
               );
             })}
